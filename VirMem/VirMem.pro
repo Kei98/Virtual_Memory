@@ -16,13 +16,21 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     queue.cpp \
     producline.cpp \
-    process.cpp \
-    node.cpp
+    processb.cpp \
+    processc.cpp \
+    processd.cpp \
+    processe.cpp \
+    node.cpp \
+    processa.cpp
 
 HEADERS  += mainwindow.h \
     queue.h \
     producline.h \
-    process.h \
-    node.h
+    processb.h \
+    processc.h \
+    processd.h \
+    processe.h \
+    node.h \
+    processa.h
 
 FORMS    += mainwindow.ui
