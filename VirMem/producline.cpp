@@ -51,6 +51,7 @@ void ProducLine::line1(){
 }
 
 void ProducLine::line2(){
+
     ProcessC *C = ProcessC::getInstance();
     ProcessD *D = ProcessD::getInstance();
     ProcessA *A = ProcessA::getInstance();
@@ -115,6 +116,7 @@ void ProducLine::line4(){
 }
 
 void ProducLine::line5(){
+
     ProcessA *A = ProcessA::getInstance();
     ProcessB *B = ProcessB::getInstance();
     ProcessC *C = ProcessC::getInstance();
