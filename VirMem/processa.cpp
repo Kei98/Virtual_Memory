@@ -20,10 +20,12 @@ void ProcessA::run(){
     while(true){
         if(!alreadyInUse){
             if(queue->isEmpty()){
+                qDebug()<<"Se terminó";
                 break;
             }else{
                 //Obtengo la línea
                 current = queue->First();
+                qDebug()<<"A";
                 if(current == 1){
                     alreadyInUse = true;
                     if(prev != current){
