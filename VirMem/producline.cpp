@@ -30,11 +30,13 @@ void ProducLine::run(){
 }
 
 void ProducLine::line1(){
+
     ProcessA *A = ProcessA::getInstance();
     ProcessB *B = ProcessB::getInstance();
     ProcessC *C = ProcessC::getInstance();
     ProcessD *D = ProcessD::getInstance();
     ProcessE *E = ProcessE::getInstance();
+
     A->queue->Enqueue(tipo);
     B->queue->Enqueue(tipo);
     C->queue->Enqueue(tipo);

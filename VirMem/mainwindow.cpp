@@ -13,10 +13,10 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     QPixmap pix1(":/Images/Carbody.png");
-    QPixmap pix2(":/Images/Door.jpg");
-    QPixmap pix3(":/Images/Motor.jpg");
-    QPixmap pix4(":/Images/wheel");
-    QPixmap pix5(":/Images/windshield.jpg");
+    QPixmap pix2(":/Images/door.jpeg");
+    QPixmap pix3(":/Images/motor.jpeg");
+    QPixmap pix4(":/Images/wheel.jpeg");
+    QPixmap pix5(":/Images/windshield.jpeg");
 
 
     ui->label_pic1->setPixmap(pix1.scaled(230,170, Qt::KeepAspectRatio));

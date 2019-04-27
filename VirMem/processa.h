@@ -12,7 +12,6 @@ public:
     QLabel *processA = new QLabel();
     void run();
     static ProcessA *getInstance();
-    static MainWindow *mW;
     bool alreadyInUse = false;
     Queue<int> *queue = new Queue<int>();
     int prev = 0;
