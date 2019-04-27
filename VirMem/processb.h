@@ -2,6 +2,8 @@
 #define PROCESSB_H
 #include <QThread>
 #include <QLabel>
+#include "queue.h"
+
 
 
 class ProcessB: public QThread
@@ -10,6 +12,9 @@ public:
     QLabel *processB = new QLabel();
     static ProcessB* getInstance();
     bool alreadyInUse = false;
+
+    Queue<int> *queue = new Queue<int>();
+    int prev;
 
     int percent1 = 0;
     int percent2 = 0;

@@ -5,12 +5,18 @@
 #include <QLabel>
 
 
+#include "queue.h"
+
+
 class ProcessE: public QThread
 {
 public:
     QLabel *processE = new QLabel();
     static ProcessE* getInstance();
     bool alreadyInUse = false;
+
+    Queue<int> *queue = new Queue<int>();
+    int prev;
 
 
     int percent1 = 0;

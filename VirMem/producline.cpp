@@ -35,6 +35,12 @@ void ProducLine::line1(){
     ProcessC *C = ProcessC::getInstance();
     ProcessD *D = ProcessD::getInstance();
     ProcessE *E = ProcessE::getInstance();
+    A->queue->Enqueue(tipo);
+    B->queue->Enqueue(tipo);
+    C->queue->Enqueue(tipo);
+    D->queue->Enqueue(tipo);
+    E->queue->Enqueue(tipo);
+
     A->start();
     B->start();
     C->start();
@@ -43,31 +49,45 @@ void ProducLine::line1(){
 }
 
 void ProducLine::line2(){
-    ProcessA *A = ProcessA::getInstance();
-    ProcessB *B = ProcessB::getInstance();
     ProcessC *C = ProcessC::getInstance();
     ProcessD *D = ProcessD::getInstance();
+    ProcessA *A = ProcessA::getInstance();
+    ProcessB *B = ProcessB::getInstance();
     ProcessE *E = ProcessE::getInstance();
-    A->start();
-    B->start();
+
+    C->queue->Enqueue(tipo);
+    D->queue->Enqueue(tipo);
+    A->queue->Enqueue(tipo);
+    B->queue->Enqueue(tipo);
+    E->queue->Enqueue(tipo);
+
     C->start();
     D->start();
+    A->start();
+    B->start();
     E->start();
 
 }
 
 void ProducLine::line3(){
 
-    ProcessA *A = ProcessA::getInstance();
+    ProcessE *E = ProcessE::getInstance();
     ProcessB *B = ProcessB::getInstance();
+    ProcessA *A = ProcessA::getInstance();
     ProcessC *C = ProcessC::getInstance();
     ProcessD *D = ProcessD::getInstance();
-    ProcessE *E = ProcessE::getInstance();
-    A->start();
+
+    E->queue->Enqueue(tipo);
+    B->queue->Enqueue(tipo);
+    A->queue->Enqueue(tipo);
+    C->queue->Enqueue(tipo);
+    D->queue->Enqueue(tipo);
+
+    E->start();
     B->start();
+    A->start();
     C->start();
     D->start();
-    E->start();
 
 }
 
@@ -77,11 +97,18 @@ void ProducLine::line4(){
     ProcessC *C = ProcessC::getInstance();
     ProcessD *D = ProcessD::getInstance();
     ProcessE *E = ProcessE::getInstance();
-    A->start();
-    B->start();
-    C->start();
+
+    D->queue->Enqueue(tipo);
+    E->queue->Enqueue(tipo);
+    C->queue->Enqueue(tipo);
+    A->queue->Enqueue(tipo);
+    B->queue->Enqueue(tipo);
+
     D->start();
     E->start();
+    C->start();
+    A->start();
+    B->start();
 
 }
 
@@ -91,11 +118,18 @@ void ProducLine::line5(){
     ProcessC *C = ProcessC::getInstance();
     ProcessD *D = ProcessD::getInstance();
     ProcessE *E = ProcessE::getInstance();
+
+    A->queue->Enqueue(tipo);
+    C->queue->Enqueue(tipo);
+    E->queue->Enqueue(tipo);
+    B->queue->Enqueue(tipo);
+    D->queue->Enqueue(tipo);
+
     A->start();
-    B->start();
     C->start();
-    D->start();
     E->start();
+    B->start();
+    D->start();
 
 }
 
@@ -106,9 +140,16 @@ void ProducLine::line6(){
     ProcessC *C = ProcessC::getInstance();
     ProcessD *D = ProcessD::getInstance();
     ProcessE *E = ProcessE::getInstance();
-    A->start();
+
+    B->queue->Enqueue(tipo);
+    C->queue->Enqueue(tipo);
+    A->queue->Enqueue(tipo);
+    D->queue->Enqueue(tipo);
+    E->queue->Enqueue(tipo);
+
     B->start();
     C->start();
+    A->start();
     D->start();
     E->start();
 
