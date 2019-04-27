@@ -9,6 +9,10 @@ ProducLine::ProducLine(int tipo){
     this->tipo = tipo;
 }
 
+ProducLine::ProducLine(){
+
+}
+
 void ProducLine::run(){
     if (tipo==1){
         line1();
@@ -25,87 +29,87 @@ void ProducLine::run(){
     }
 }
 
-void ProducLine::run1(){
-    return this->run();
-}
-
 void ProducLine::line1(){
-    ProcessA *A= new ProcessA();
-    ProcessB *B= new ProcessB();
-    ProcessC *C= new ProcessC();
-    ProcessD *D= new ProcessD();
-    ProcessE *E= new ProcessE();
-    A->run1();
-    B->run1();
-    C->run1();
-    D->run1();
-    E->run1();
+    ProcessA *A = ProcessA::getInstance();
+    ProcessB *B = ProcessB::getInstance();
+    ProcessC *C = ProcessC::getInstance();
+    ProcessD *D = ProcessD::getInstance();
+    ProcessE *E = ProcessE::getInstance();
+    A->start();
+    B->start();
+    C->start();
+    D->start();
+    E->start();
 }
+
 void ProducLine::line2(){
-    ProcessA *A= new ProcessA();
-    ProcessB *B= new ProcessB();
-    ProcessC *C= new ProcessC();
-    ProcessD *D= new ProcessD();
-    ProcessE *E= new ProcessE();
-    A->run1();
-    B->run1();
-    C->run1();
-    D->run1();
-    E->run1();
+    ProcessA *A = ProcessA::getInstance();
+    ProcessB *B = ProcessB::getInstance();
+    ProcessC *C = ProcessC::getInstance();
+    ProcessD *D = ProcessD::getInstance();
+    ProcessE *E = ProcessE::getInstance();
+    A->start();
+    B->start();
+    C->start();
+    D->start();
+    E->start();
 
 }
+
 void ProducLine::line3(){
 
-    ProcessA *A= new ProcessA();
-    ProcessB *B= new ProcessB();
-    ProcessC *C= new ProcessC();
-    ProcessD *D= new ProcessD();
-    ProcessE *E= new ProcessE();
-    A->run1();
-    B->run1();
-    C->run1();
-    D->run1();
-    E->run1();
+    ProcessA *A = ProcessA::getInstance();
+    ProcessB *B = ProcessB::getInstance();
+    ProcessC *C = ProcessC::getInstance();
+    ProcessD *D = ProcessD::getInstance();
+    ProcessE *E = ProcessE::getInstance();
+    A->start();
+    B->start();
+    C->start();
+    D->start();
+    E->start();
 
 }
+
 void ProducLine::line4(){
-    ProcessA *A= new ProcessA();
-    ProcessB *B= new ProcessB();
-    ProcessC *C= new ProcessC();
-    ProcessD *D= new ProcessD();
-    ProcessE *E= new ProcessE();
-    A->run1();
-    B->run1();
-    C->run1();
-    D->run1();
-    E->run1();
+    ProcessA *A = ProcessA::getInstance();
+    ProcessB *B = ProcessB::getInstance();
+    ProcessC *C = ProcessC::getInstance();
+    ProcessD *D = ProcessD::getInstance();
+    ProcessE *E = ProcessE::getInstance();
+    A->start();
+    B->start();
+    C->start();
+    D->start();
+    E->start();
 
 }
+
 void ProducLine::line5(){
-    ProcessA *A= new ProcessA();
-    ProcessB *B= new ProcessB();
-    ProcessC *C= new ProcessC();
-    ProcessD *D= new ProcessD();
-    ProcessE *E= new ProcessE();
-    A->run1();
-    B->run1();
-    C->run1();
-    D->run1();
-    E->run1();
+    ProcessA *A = ProcessA::getInstance();
+    ProcessB *B = ProcessB::getInstance();
+    ProcessC *C = ProcessC::getInstance();
+    ProcessD *D = ProcessD::getInstance();
+    ProcessE *E = ProcessE::getInstance();
+    A->start();
+    B->start();
+    C->start();
+    D->start();
+    E->start();
 
 }
+
 void ProducLine::line6(){
 
-    ProcessA *A= new ProcessA();
-    ProcessB *B= new ProcessB();
-    ProcessC *C= new ProcessC();
-    ProcessD *D= new ProcessD();
-    ProcessE *E= new ProcessE();
-    A->run1();
-    B->run1();
-    C->run1();
-    D->run1();
-    E->run1();
-
+    ProcessA *A = ProcessA::getInstance();
+    ProcessB *B = ProcessB::getInstance();
+    ProcessC *C = ProcessC::getInstance();
+    ProcessD *D = ProcessD::getInstance();
+    ProcessE *E = ProcessE::getInstance();
+    A->start();
+    B->start();
+    C->start();
+    D->start();
+    E->start();
 
 }

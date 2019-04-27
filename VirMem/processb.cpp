@@ -6,12 +6,22 @@ ProcessB::ProcessB()
 {
 }
 
+ProcessB* ProcessB::instance = 0;
+
+ProcessB* ProcessB::getInstance(){
+    if(instance == 0){
+        instance = new ProcessB();
+    }
+    return instance;
+}
+
 
 void ProcessB::run(){
-    qDebug()<<"corriendo B";
+    while(true){
+        qDebug()<<"corriendo B";
+        msleep(500);
+    }
+
 }
 
-void ProcessB::run1(){
-    return this->run();
 
-}
