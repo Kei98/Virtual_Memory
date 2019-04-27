@@ -47,11 +47,11 @@ void ProducLine::line2(){
     ProcessC *C= new ProcessC();
     ProcessD *D= new ProcessD();
     ProcessE *E= new ProcessE();
-    A->run1();
-    B->run1();
-    C->run1();
-    D->run1();
     E->run1();
+    D->run1();
+    C->run1();
+    B->run1();
+    A->run1();
 
 }
 void ProducLine::line3(){
@@ -61,11 +61,11 @@ void ProducLine::line3(){
     ProcessC *C= new ProcessC();
     ProcessD *D= new ProcessD();
     ProcessE *E= new ProcessE();
-    A->run1();
-    B->run1();
     C->run1();
+    A->run1();
     D->run1();
     E->run1();
+    B->run1();
 
 }
 void ProducLine::line4(){
@@ -74,11 +74,11 @@ void ProducLine::line4(){
     ProcessC *C= new ProcessC();
     ProcessD *D= new ProcessD();
     ProcessE *E= new ProcessE();
-    A->run1();
     B->run1();
+    E->run1();
+    A->run1();
     C->run1();
     D->run1();
-    E->run1();
 
 }
 void ProducLine::line5(){
@@ -87,10 +87,10 @@ void ProducLine::line5(){
     ProcessC *C= new ProcessC();
     ProcessD *D= new ProcessD();
     ProcessE *E= new ProcessE();
-    A->run1();
-    B->run1();
-    C->run1();
     D->run1();
+    B->run1();
+    A->run1();
+    C->run1();
     E->run1();
 
 }
@@ -101,11 +101,11 @@ void ProducLine::line6(){
     ProcessC *C= new ProcessC();
     ProcessD *D= new ProcessD();
     ProcessE *E= new ProcessE();
-    A->run1();
+    E->run1();
     B->run1();
+    A->run1();
     C->run1();
     D->run1();
-    E->run1();
 
 
 }
