@@ -9,6 +9,10 @@ ProducLine::ProducLine(int tipo){
     this->tipo = tipo;
 }
 
+ProducLine::ProducLine(){
+
+}
+
 void ProducLine::run(){
     if (tipo==1){
         line1();
@@ -25,87 +29,130 @@ void ProducLine::run(){
     }
 }
 
-void ProducLine::run1(){
-    return this->run();
-}
-
 void ProducLine::line1(){
-    ProcessA *A= new ProcessA();
-    ProcessB *B= new ProcessB();
-    ProcessC *C= new ProcessC();
-    ProcessD *D= new ProcessD();
-    ProcessE *E= new ProcessE();
-    A->run1();
-    B->run1();
-    C->run1();
-    D->run1();
-    E->run1();
+    ProcessA *A = ProcessA::getInstance();
+    ProcessB *B = ProcessB::getInstance();
+    ProcessC *C = ProcessC::getInstance();
+    ProcessD *D = ProcessD::getInstance();
+    ProcessE *E = ProcessE::getInstance();
+    A->queue->Enqueue(tipo);
+    B->queue->Enqueue(tipo);
+    C->queue->Enqueue(tipo);
+    D->queue->Enqueue(tipo);
+    E->queue->Enqueue(tipo);
+
+    A->start();
+    B->start();
+    C->start();
+    D->start();
+    E->start();
 }
+
 void ProducLine::line2(){
-    ProcessA *A= new ProcessA();
-    ProcessB *B= new ProcessB();
-    ProcessC *C= new ProcessC();
-    ProcessD *D= new ProcessD();
-    ProcessE *E= new ProcessE();
-    E->run1();
-    D->run1();
-    C->run1();
-    B->run1();
-    A->run1();
+
+    ProcessC *C = ProcessC::getInstance();
+    ProcessD *D = ProcessD::getInstance();
+    ProcessA *A = ProcessA::getInstance();
+    ProcessB *B = ProcessB::getInstance();
+    ProcessE *E = ProcessE::getInstance();
+
+    C->queue->Enqueue(tipo);
+    D->queue->Enqueue(tipo);
+    A->queue->Enqueue(tipo);
+    B->queue->Enqueue(tipo);
+    E->queue->Enqueue(tipo);
+
+    C->start();
+    D->start();
+    A->start();
+    B->start();
+    E->start();
 
 }
+
 void ProducLine::line3(){
 
-    ProcessA *A= new ProcessA();
-    ProcessB *B= new ProcessB();
-    ProcessC *C= new ProcessC();
-    ProcessD *D= new ProcessD();
-    ProcessE *E= new ProcessE();
-    C->run1();
-    A->run1();
-    D->run1();
-    E->run1();
-    B->run1();
+    ProcessE *E = ProcessE::getInstance();
+    ProcessB *B = ProcessB::getInstance();
+    ProcessA *A = ProcessA::getInstance();
+    ProcessC *C = ProcessC::getInstance();
+    ProcessD *D = ProcessD::getInstance();
+
+    E->queue->Enqueue(tipo);
+    B->queue->Enqueue(tipo);
+    A->queue->Enqueue(tipo);
+    C->queue->Enqueue(tipo);
+    D->queue->Enqueue(tipo);
+
+    E->start();
+    B->start();
+    A->start();
+    C->start();
+    D->start();
 
 }
+
 void ProducLine::line4(){
-    ProcessA *A= new ProcessA();
-    ProcessB *B= new ProcessB();
-    ProcessC *C= new ProcessC();
-    ProcessD *D= new ProcessD();
-    ProcessE *E= new ProcessE();
-    B->run1();
-    E->run1();
-    A->run1();
-    C->run1();
-    D->run1();
+    ProcessA *A = ProcessA::getInstance();
+    ProcessB *B = ProcessB::getInstance();
+    ProcessC *C = ProcessC::getInstance();
+    ProcessD *D = ProcessD::getInstance();
+    ProcessE *E = ProcessE::getInstance();
+
+    D->queue->Enqueue(tipo);
+    E->queue->Enqueue(tipo);
+    C->queue->Enqueue(tipo);
+    A->queue->Enqueue(tipo);
+    B->queue->Enqueue(tipo);
+
+    D->start();
+    E->start();
+    C->start();
+    A->start();
+    B->start();
 
 }
+
 void ProducLine::line5(){
-    ProcessA *A= new ProcessA();
-    ProcessB *B= new ProcessB();
-    ProcessC *C= new ProcessC();
-    ProcessD *D= new ProcessD();
-    ProcessE *E= new ProcessE();
-    D->run1();
-    B->run1();
-    A->run1();
-    C->run1();
-    E->run1();
+
+    ProcessA *A = ProcessA::getInstance();
+    ProcessB *B = ProcessB::getInstance();
+    ProcessC *C = ProcessC::getInstance();
+    ProcessD *D = ProcessD::getInstance();
+    ProcessE *E = ProcessE::getInstance();
+
+    A->queue->Enqueue(tipo);
+    C->queue->Enqueue(tipo);
+    E->queue->Enqueue(tipo);
+    B->queue->Enqueue(tipo);
+    D->queue->Enqueue(tipo);
+
+    A->start();
+    C->start();
+    E->start();
+    B->start();
+    D->start();
 
 }
+
 void ProducLine::line6(){
 
-    ProcessA *A= new ProcessA();
-    ProcessB *B= new ProcessB();
-    ProcessC *C= new ProcessC();
-    ProcessD *D= new ProcessD();
-    ProcessE *E= new ProcessE();
-    E->run1();
-    B->run1();
-    A->run1();
-    C->run1();
-    D->run1();
+    ProcessA *A = ProcessA::getInstance();
+    ProcessB *B = ProcessB::getInstance();
+    ProcessC *C = ProcessC::getInstance();
+    ProcessD *D = ProcessD::getInstance();
+    ProcessE *E = ProcessE::getInstance();
 
+    B->queue->Enqueue(tipo);
+    C->queue->Enqueue(tipo);
+    A->queue->Enqueue(tipo);
+    D->queue->Enqueue(tipo);
+    E->queue->Enqueue(tipo);
+
+    B->start();
+    C->start();
+    A->start();
+    D->start();
+    E->start();
 
 }

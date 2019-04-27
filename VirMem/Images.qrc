@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>Carbody.png</file>
+        <file>Door.jpg</file>
+        <file>Motor.jpg</file>
+        <file>wheel</file>
+        <file>windshield.jpg</file>
+    </qresource>
+</RCC>

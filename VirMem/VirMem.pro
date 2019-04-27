@@ -34,3 +34,6 @@ HEADERS  += mainwindow.h \
     processa.h
 
 FORMS    += mainwindow.ui
+
+RESOURCES += \
+    Images.qrc

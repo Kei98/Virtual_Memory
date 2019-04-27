@@ -1,11 +1,11 @@
 #ifndef PRODUCLINE_H
 #define PRODUCLINE_H
-#include <QThread>
 
 
-class ProducLine: public QThread
+class ProducLine
 {
 public:
+    ProducLine();
     ProducLine(int);
     void line1();
     void line2();
@@ -14,8 +14,10 @@ public:
     void line5();
     void line6();
     int tipo;
-    void run1();
-protected:
+    int nProcess;
+
+
+
     void run();
 
 };

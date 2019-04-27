@@ -1,6 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "queue.h"
+#include "producline.h"
+
 #include <QMainWindow>
 
 namespace Ui {
@@ -14,6 +17,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    Queue<ProducLine> *mainQueue = new Queue<ProducLine>();
 
 private slots:
     void on_pushButton_clicked();
